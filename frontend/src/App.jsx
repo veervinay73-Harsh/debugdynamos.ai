@@ -23,7 +23,7 @@ import {
   serverTimestamp 
 } from 'firebase/firestore';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+const API_URL = import.meta.env.VITE_API_URL;
 
 if (typeof window !== 'undefined') {
   window.db = db;
