@@ -35,7 +35,7 @@ export const Sidebar = ({
         </button>
         <div className="flex items-center gap-1.5 font-display font-bold text-sm tracking-tight text-neutral-900 dark:text-white">
           <Logo size={24} />
-          <span>talkwithme.in</span>
+          <span>DD</span>
         </div>
         <button
           onClick={onNewChat}
@@ -64,7 +64,7 @@ export const Sidebar = ({
           {isOpen ? (
             <div className="flex items-center gap-2.5 font-display font-bold text-lg tracking-tight text-neutral-900 dark:text-white select-none">
               <Logo size={28} />
-              <span>talkwithme.in</span>
+              <span>DD</span>
             </div>
           ) : (
             <div className="hidden md:flex items-center justify-center">

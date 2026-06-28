@@ -123,7 +123,7 @@ export default function App() {
           const stillExists = conversationsList.some(c => c.id === prevId);
           if (stillExists) return prevId;
 
-          const savedActiveId = localStorage.getItem(`talkwithme-active-id-${user.uid}`);
+          const savedActiveId = localStorage.getItem(`dd-active-id-${user.uid}`);
           const match = conversationsList.find(c => c.id === savedActiveId);
           return match ? match.id : conversationsList[0].id;
         });
@@ -141,7 +141,7 @@ export default function App() {
   useEffect(() => {
     if (!user || !activeChatId || !db) return;
 
-    localStorage.setItem(`talkwithme-active-id-${user.uid}`, activeChatId);
+    localStorage.setItem(`dd-active-id-${user.uid}`, activeChatId);
 
     const msgsQuery = query(
       collection(db, 'users', user.uid, 'conversations', activeChatId, 'messages'),
@@ -516,7 +516,7 @@ export default function App() {
       <div className="flex items-center justify-center w-screen h-screen bg-neutral-950 text-white select-none">
         <div className="flex flex-col items-center gap-4">
           <Logo size={60} className="animate-pulse" />
-          <p className="text-xs font-semibold tracking-widest text-neutral-500 font-display animate-pulse uppercase">talkwithme.in initializing...</p>
+          <p className="text-xs font-semibold tracking-widest text-neutral-500 font-display animate-pulse uppercase">DD initializing...</p>
         </div>
       </div>
     );
@@ -542,7 +542,7 @@ export default function App() {
           </div>
 
           <h1 className="text-3xl font-extrabold tracking-tight text-white font-display mb-2 flex items-center gap-2">
-            <span>talkwithme.in</span>
+            <span>DD</span>
             <Sparkles size={18} className="text-emerald-400 animate-pulse" />
           </h1>
           <p className="text-sm text-neutral-450 max-w-xs mb-8">

@@ -50,8 +50,12 @@ export const MessageInput = ({ onSend, isGenerating, onStop, onAttach }) => {
   useEffect(() => {
     const textarea = textareaRef.current;
     if (textarea) {
-      textarea.style.height = 'auto';
-      textarea.style.height = `${Math.min(textarea.scrollHeight, 200)}px`;
+      if (!input) {
+        textarea.style.height = 'auto';
+      } else {
+        textarea.style.height = 'auto';
+        textarea.style.height = `${Math.min(textarea.scrollHeight, 200)}px`;
+      }
     }
   }, [input]);
 

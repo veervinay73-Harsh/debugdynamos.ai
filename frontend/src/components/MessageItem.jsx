@@ -270,7 +270,7 @@ export const MessageItem = ({ message, isStreaming = false, onRegenerate, dbChat
                <AssistantIndicator />
             )}
             <span className="font-semibold text-neutral-700 dark:text-neutral-300 font-display">
-              {isUser ? 'You' : 'talkwithme.in'}
+              {isUser ? 'You' : 'DD'}
             </span>
             <span>•</span>
             <span>{message.timestamp}</span>
