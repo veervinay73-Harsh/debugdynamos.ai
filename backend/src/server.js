@@ -203,3 +203,7 @@ process.on('unhandledRejection', (reason, promise) => {
 });
 
 startServer(Number(PORT));
+
+app.get("/", (req, res) => {
+  res.send("Backend is running!");
+});
