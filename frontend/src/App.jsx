@@ -347,7 +347,7 @@ export default function App() {
         { role: 'user', content: text }
       ].slice(-20); // Keep last 20 messages for context window limit
 
-      const response = await fetch(`${API_URL}/chat/stream`, {
+      const response = await fetch(`${API_URL}/api/chat/stream`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ messages: payloadMessages }),
