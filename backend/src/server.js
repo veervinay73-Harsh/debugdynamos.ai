@@ -11,6 +11,10 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("Backend is running!");
+});
+
 // POST /api/chat/stream - Stream Groq AI response
 app.post('/api/chat/stream', async (req, res) => {
   const { messages } = req.body;
@@ -204,6 +208,3 @@ process.on('unhandledRejection', (reason, promise) => {
 
 startServer(Number(PORT));
 
-app.get("/", (req, res) => {
-  res.send("Backend is running!");
-});
